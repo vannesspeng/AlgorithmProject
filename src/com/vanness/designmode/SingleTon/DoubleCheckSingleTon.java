@@ -24,12 +24,12 @@ public class DoubleCheckSingleTon {
 
     /**
      * 为什么不直接在getInstance方法上使用Synchronized同步，同步方法，粒度过大，影响性能。
-     * @return
+     * @return 返回双检查锁线程安全的单例模式
      */
     public static DoubleCheckSingleTon getInstance() {
         if(instance == null) {
             synchronized (DoubleCheckSingleTon.class) {  //降低同步的粒度，但此时却不发保证线程安全了，需使用双检查锁机制
-                if(instance == null) { //
+                if(instance == null) { //DCL双重检查锁
                     instance = new DoubleCheckSingleTon();
                 }
 
