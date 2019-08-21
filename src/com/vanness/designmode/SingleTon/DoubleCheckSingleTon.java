@@ -28,7 +28,7 @@ public class DoubleCheckSingleTon {
      */
     public static DoubleCheckSingleTon getInstance() {
         if(instance == null) {
-            synchronized (DoubleCheckSingleTon.class) {  //降低同步的粒度，但此时却不发保证线程安全了，需使用双检查锁机制
+            synchronized (DoubleCheckSingleTon.class) {  //降低同步的粒度，但此时却无法保证线程安全了，需使用双检查锁机制
                 if(instance == null) { //DCL双重检查锁
                     instance = new DoubleCheckSingleTon();
                 }
