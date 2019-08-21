@@ -29,5 +29,15 @@ public class Test {
         }else {
             System.out.println("s5和s6不是同一个对象");
         }
+
+        //静态内部类实现单例
+        StaticInnerClassSingleTon singleTon11 = StaticInnerClassSingleTon.getSingleton();
+        StaticInnerClassSingleTon singleTon22 = StaticInnerClassSingleTon.getSingleton();
+        System.out.println(singleTon11 == singleTon22);
+
+        //枚举实现单例
+        EnumSingleton singleton1 = EnumSingleton.singleton;
+        EnumSingleton singleton2 = EnumSingleton.singleton;
+        System.out.println(singleton1 == singleton2);
     }
 }
