@@ -29,7 +29,7 @@ public class TestClassReflect {
         System.out.println(classType);
     }
 
-    public static void main(String[] args) throws ClassNotFoundException{
+    public static void main(String[] args) throws ClassNotFoundException {
         TestClassReflect.getClassForName();
         TestClassReflect.getClassClass();
         TestClassReflect.getClassOrdinal();

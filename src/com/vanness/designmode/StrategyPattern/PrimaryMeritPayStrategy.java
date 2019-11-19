@@ -6,6 +6,7 @@ package com.vanness.designmode.StrategyPattern;
 public class PrimaryMeritPayStrategy implements MeritPayStrategy {
     /**
      * C类员工绩效工资按照80%发放
+     *
      * @param baseMeritPay 基础绩效工资
      * @return
      */

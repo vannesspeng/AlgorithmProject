@@ -2,7 +2,7 @@ package com.vanness.designmode.DecoratorPattern;
 
 public class HouseBlend extends Beverage {
 
-    public HouseBlend(){
+    public HouseBlend() {
         description = "HouseBlend";
     }
 

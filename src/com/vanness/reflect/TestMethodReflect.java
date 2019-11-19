@@ -3,12 +3,12 @@ package com.vanness.reflect;
 import java.lang.reflect.Method;
 
 public class TestMethodReflect {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         //获取Class对象
         Class classType = Class.forName("java.lang.String");
 
         Method[] methods = classType.getDeclaredMethods();
-        for(Method method : methods) {
+        for (Method method : methods) {
             System.out.println(method);
         }
 
@@ -18,7 +18,6 @@ public class TestMethodReflect {
         for (Method method : publicMethods) {
             System.out.println(method);
         }
-
 
 
     }

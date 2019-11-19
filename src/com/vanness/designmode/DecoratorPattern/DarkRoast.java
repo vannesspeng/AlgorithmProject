@@ -2,7 +2,7 @@ package com.vanness.designmode.DecoratorPattern;
 
 public class DarkRoast extends Beverage {
 
-    public DarkRoast(){
+    public DarkRoast() {
         description = "DarkRoast";
     }
 

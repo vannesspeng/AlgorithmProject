@@ -8,11 +8,12 @@ import java.io.Serializable;
  * 2、创建一个静态的类实例变量
  * 3、对外提供一个getInstance方法，返回2中的静态实例变量
  */
-public class SingleTonOfHunger implements Serializable{
+public class SingleTonOfHunger implements Serializable {
 
     private static SingleTonOfHunger singleTonOfHungerInstance = new SingleTonOfHunger();
 
-    private SingleTonOfHunger () {}
+    private SingleTonOfHunger() {
+    }
 
     public static SingleTonOfHunger getInstance() {
         return singleTonOfHungerInstance;

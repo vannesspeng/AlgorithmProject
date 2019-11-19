@@ -9,7 +9,7 @@ public class WeatherData implements Subject {
     private float humidity;
     private float pressure;
 
-    public WeatherData(){
+    public WeatherData() {
         this.observers = new ArrayList<>();
     }
 
@@ -21,7 +21,7 @@ public class WeatherData implements Subject {
     @Override
     public void removeObserver(Observer o) {
         int i = observers.indexOf(o);
-        if(i >= 0){
+        if (i >= 0) {
             observers.remove(o);
         }
 
@@ -29,17 +29,17 @@ public class WeatherData implements Subject {
 
     @Override
     public void notifyObservers() {
-        for(int i=0; i < observers.size(); i++){
+        for (int i = 0; i < observers.size(); i++) {
             Observer observer = observers.get(i);
             observer.update(this.temp, this.humidity, this.pressure);
         }
     }
 
-    public void measurementChanged(){
+    public void measurementChanged() {
         this.notifyObservers();
     }
 
-    public void setMeasurements(float temp, float humidity, float pressure){
+    public void setMeasurements(float temp, float humidity, float pressure) {
         this.temp = temp;
         this.humidity = humidity;
         this.pressure = pressure;

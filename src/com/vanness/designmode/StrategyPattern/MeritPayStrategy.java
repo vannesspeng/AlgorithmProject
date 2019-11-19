@@ -6,6 +6,7 @@ package com.vanness.designmode.StrategyPattern;
 public interface MeritPayStrategy {
     /**
      * 计算最终的绩效工资
+     *
      * @param baseMeritPay 基础绩效工资
      * @return 最终绩效工资
      */

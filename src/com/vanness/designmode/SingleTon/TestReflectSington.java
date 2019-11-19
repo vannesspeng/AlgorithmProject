@@ -7,11 +7,11 @@ import java.io.ObjectOutputStream;
 import java.lang.reflect.Constructor;
 
 public class TestReflectSington {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         SingleTonOfLazy s1 = SingleTonOfLazy.getInstance();
         SingleTonOfLazy s2 = SingleTonOfLazy.getInstance();
 
-        System.out.println(s1==s2);//true
+        System.out.println(s1 == s2);//true
 
         //使用反射破坏了单例
         /*Class<SingleTonOfLazy> clazz = (Class<SingleTonOfLazy>)Class.forName(SingleTonOfLazy.class.getName());
@@ -31,7 +31,7 @@ public class TestReflectSington {
         fos.close();
 
         //将对象反序列化回来
-        ObjectInputStream ois  = new ObjectInputStream(new FileInputStream("D:/SingleTon.txt"));
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D:/SingleTon.txt"));
         SingleTonOfLazy s6 = (SingleTonOfLazy) ois.readObject();
         System.out.println(s5);
         System.out.println(s5 == s6);

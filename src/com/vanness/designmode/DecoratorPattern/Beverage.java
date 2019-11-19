@@ -3,7 +3,7 @@ package com.vanness.designmode.DecoratorPattern;
 public abstract class Beverage {
     String description = "Unkown Beverage";
 
-    public String getDescription(){
+    public String getDescription() {
         return description;
     }
 

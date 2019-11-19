@@ -6,7 +6,7 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
     private float temperature;
     private float humidity;
 
-    public CurrentConditionsDisplay(WeatherData weatherData){
+    public CurrentConditionsDisplay(WeatherData weatherData) {
         this.weatherData = weatherData;
         //观察者要注册到主题对象中
         weatherData.registerObserver(this);

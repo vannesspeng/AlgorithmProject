@@ -9,7 +9,8 @@ public class CountKeywordInFile {
         countKeywordInFile("D:/read.txt", "java");
     }
 
-    /**题目：
+    /**
+     * 题目：统计一个文件中某个字母出现的次数
      *
      * @param filePath
      * @param keyword
@@ -21,10 +22,10 @@ public class CountKeywordInFile {
             BufferedReader br = new BufferedReader(new InputStreamReader(fis));
             String str;
             int count = 0;
-            while((str = br.readLine()) != null) {
+            while ((str = br.readLine()) != null) {
                 Pattern p = Pattern.compile(keyword);
                 Matcher matcher = p.matcher(str);
-                while(matcher.find()) {
+                while (matcher.find()) {
                     count++;
                 }
             }

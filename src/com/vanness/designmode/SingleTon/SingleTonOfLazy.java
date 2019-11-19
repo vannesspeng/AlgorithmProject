@@ -9,7 +9,7 @@ import java.io.Serializable;
  * 2、创建一个静态的类实例变量
  * 3、对外提供一个getInstance方法，返回2中的静态实例变量
  */
-public class SingleTonOfLazy implements Serializable{
+public class SingleTonOfLazy implements Serializable {
     private static SingleTonOfLazy instance;
 
     private SingleTonOfLazy() {
@@ -20,13 +20,13 @@ public class SingleTonOfLazy implements Serializable{
     }
 
     public static SingleTonOfLazy getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new SingleTonOfLazy();
         }
         return instance;
     }
 
     private Object readResolve() throws Exception {
-       return getInstance();
+        return getInstance();
     }
 }
