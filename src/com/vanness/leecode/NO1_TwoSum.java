@@ -18,12 +18,13 @@ import java.util.Map;
  * Created by pyy on 2019/11/25.
  */
 public class NO1_TwoSum {
-    private static int[] twoSum(int[] nums, int target) {
+
+    public int[] twoSum(int[] nums, int target) {
         //将数组的index和value放入到一个hashmap中
         Map<Integer, Integer> map = new HashMap<>();
         int[] res = {-1, -1};
         for (int i = 0; i < nums.length; i++) {
-            if(map.containsKey(target - nums[i])){
+            if (map.containsKey(target - nums[i])) {
                 res[0] = map.get(target - nums[i]);
                 res[1] = i;
                 break;
@@ -32,13 +33,4 @@ public class NO1_TwoSum {
         }
         return res;
     }
-
-    public static void main(String[] args) {
-        int[] nums = {2, 7, 11, 15};
-        int target = 22;
-        int[] result = twoSum(nums, target);
-        System.out.println(result);
-    }
-
-
 }
